@@ -7,7 +7,6 @@ namespace AsignaSalones.App.dominio  {
         public string nombre{get;set;}   
         public string apellido{get;set;}
         public string identificacion{get;set;}
-        public string identificacion{get;set;}
         public int edad{get;set;}
         public bool estadoCovid{get;set;}
         public int id{get;set;}
