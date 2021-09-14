@@ -1,6 +1,6 @@
 namespace AsignaSalones.App.Dominio
 {
-    piblic enum Sintomas
+    public enum Sintomas
     {
         Tos,
         Fiebre,
