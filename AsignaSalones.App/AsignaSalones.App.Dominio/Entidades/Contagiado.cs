@@ -5,10 +5,11 @@ namespace AsignaSalones.App.Dominio
     public class Contagiado
     {
         public int id {get;set;}
-        public Persona Persona {get;set;}
-        public dateTime FechaContagio {get;set;}
-        public Sintomas Sintomas {get;set;}
-        public dateTime PeriodoAislamiento {get;set;}
+        public Persona persona {get;set;}
+        public DateTime fechaContagio {get;set;}
+        //public System.Collections.Generic.List<Sintomas> sintomas {get;set;}
+        public String sintomas {get;set;}
+        public DateTime periodoAislamiento {get;set;}
         
     }
 }

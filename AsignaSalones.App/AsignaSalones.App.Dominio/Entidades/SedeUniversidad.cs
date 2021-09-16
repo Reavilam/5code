@@ -6,8 +6,8 @@ namespace AsignaSalones.App.Dominio
     {
         public int id {get;set;}
         public string nombre  {get;set;}
-        public System.Collections.Generic.List<Salon> Salones {get;set;}
-        public int numeroSalonesDisp {get;set;}
+        public System.Collections.Generic.List<HorarioClase> materias {get;set;}
+        public int numeroSalonesDispHora {get;set;}
         
         
     }
