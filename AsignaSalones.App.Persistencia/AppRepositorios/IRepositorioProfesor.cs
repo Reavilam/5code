@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using AsignaSalones.App.Dominio;
 
-namespaceAsignaSalones.App.Persistencia
+namespace AsignaSalones.App.Persistencia
 {
     public interface IRepositorioProfesor
     {
