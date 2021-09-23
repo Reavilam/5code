@@ -6,12 +6,14 @@ namespace AsignaSalones.App.Persistencia
     public class AppContext:DbContext
     {
         public DbSet<Persona> Personas { get; set; }
+        public DbSet<Profesor> Profesores { get; set; }
         public DbSet<Directivo> Directivos { get; set; }
         public DbSet<Estudiante> Estudiantes { get; set; }
         public DbSet<PersonalAseo> PersonasAseo { get; set; }
         public DbSet<Contagiado> Contagiados { get; set; }
         public DbSet<SedeUniversidad> SedesUniversidad { get; set; }
         public DbSet<Salon> Salones { get; set; }
+        public DbSet<HorarioClase> HorariosClases { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
