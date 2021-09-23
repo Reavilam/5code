@@ -19,7 +19,7 @@ namespace AsignaSalones.App.Persistencia
             return directivoAdicionado.Entity ;
         }
 
-        Directivo IRepositorioDirectivo.Updatedirectivo(directivo directivo)
+        Directivo IRepositorioDirectivo.UpdateDirectivo(Directivo directivo)
         {
             var directivoEncontrado = _appContext.directivos.FirstOrDefault(p => p.id == directivo.id);
             if (directivoEncontrado != null)
@@ -34,7 +34,7 @@ namespace AsignaSalones.App.Persistencia
             return directivoEncontrado;
         }
 
-        void IRepositorioDirectivo.Deletedirectivo(int iddirectivo)
+        void IRepositorioDirectivo.DeleteDirectivo(int iddirectivo)
         {
             var directivoEncontrado = _appContext.directivos.FirstOrDefault(p => p.id == iddirectivo);
             if (directivoEncontrado == null)
@@ -43,13 +43,13 @@ namespace AsignaSalones.App.Persistencia
             _appContext.SaveChanges();
         }
 
-        Directivo IRepositorioDirectivo.Getdirectivo(int iddirectivo)
+        Directivo IRepositorioDirectivo.GetDirectivo(int iddirectivo)
         {
             var directivoEncontrado = _appContext.directivos.FirstOrDefault(p => p.id == iddirectivo);
             return directivoEncontrado;
         }
 
-         IEnumerable<directivo> IRepositorioDirectivo.GetAlldirectivo()
+         IEnumerable<Directivo> IRepositorioDirectivo.GetAllDirectivo()
         {
             return _appContext.directivos;
         }
