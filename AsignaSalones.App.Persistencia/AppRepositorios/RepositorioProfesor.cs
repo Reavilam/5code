@@ -31,7 +31,7 @@ namespace AsignaSalones.App.Persistencia
                 profesorEncontrado.correo = profesor.correo;
                 _appContext.SaveChanges();
             }
-            return profesorEncontrado;
+            return profesorEncontrado; 
         }
 
         void IRepositorioProfesor.DeleteProfesor(int idprofesor)
