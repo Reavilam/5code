@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 using System;
-=======
-﻿using System;
->>>>>>> 8c6c23e22dc04242b2f665d20b06515372dd6b79
 using AsignaSalones.App.Dominio;
 using AsignaSalones.App.Persistencia;
 using System.Collections.Generic;
@@ -12,16 +8,6 @@ namespace AsignaSalones.App.Consola
 {
     class Program
     {
-<<<<<<< HEAD
-        //private static IRepositorioSedeUniversidad _repoSedeUniversidad = new RepositorioSedeUniversidad(new Persistencia.AppContext());
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello World! - ef");
-        }
-
-    }
-}
-=======
         private static IRepositorioSedeUniversidad _repoSedeUniversidad = new RepositorioSedeUniversidad(new Persistencia.AppContext());
         static void Main(string[] args)
         {
@@ -88,5 +74,3 @@ namespace AsignaSalones.App.Consola
 
     }
 }
-
->>>>>>> 8c6c23e22dc04242b2f665d20b06515372dd6b79
