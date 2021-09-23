@@ -14,13 +14,14 @@ namespace AsignaSalones.App.Persistencia
         public DbSet<SedeUniversidad> SedesUniversidad { get; set; }
         public DbSet<Salon> Salones { get; set; }
         public DbSet<HorarioClase> HorariosClases { get; set; }
+        public DbSet<Matricula> Matriculas { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-                .UseSqlServer("Data Source = (Localdb)\\MSSQLLocalDB; Initial Catalog = AsignaSalones");
+                .UseSqlServer("Data Source = (Localdb)\\MSSQLLocalDB; Initial Catalog = AsignaSalones2");
             }
         }
     }

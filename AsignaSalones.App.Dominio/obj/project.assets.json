@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
+      "projectUniqueName": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
       "projectName": "AsignaSalones.App.Dominio",
-      "projectPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
+      "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
       "packagesPath": "C:\\Users\\Wil\\.nuget\\packages\\",
-      "outputPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\obj\\",
+      "outputPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Wil\\AppData\\Roaming\\NuGet\\NuGet.Config"

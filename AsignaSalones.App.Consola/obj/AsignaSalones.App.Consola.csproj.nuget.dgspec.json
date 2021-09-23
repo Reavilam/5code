@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Consola\\AsignaSalones.App.Consola.csproj": {}
+    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\AsignaSalones.App.Consola.csproj": {}
   },
   "projects": {
-    "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Consola\\AsignaSalones.App.Consola.csproj": {
+    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\AsignaSalones.App.Consola.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Consola\\AsignaSalones.App.Consola.csproj",
+        "projectUniqueName": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\AsignaSalones.App.Consola.csproj",
         "projectName": "AsignaSalones.App.Consola",
-        "projectPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Consola\\AsignaSalones.App.Consola.csproj",
+        "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\AsignaSalones.App.Consola.csproj",
         "packagesPath": "C:\\Users\\Wil\\.nuget\\packages\\",
-        "outputPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Consola\\obj\\",
+        "outputPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -25,11 +25,11 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
-                "projectPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj"
+              "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
+                "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj"
               },
-              "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj": {
-                "projectPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj"
+              "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj": {
+                "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
+    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
+        "projectUniqueName": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
         "projectName": "AsignaSalones.App.Dominio",
-        "projectPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
+        "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
         "packagesPath": "C:\\Users\\Wil\\.nuget\\packages\\",
-        "outputPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\obj\\",
+        "outputPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -122,14 +122,14 @@
         }
       }
     },
-    "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj": {
+    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj",
+        "projectUniqueName": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj",
         "projectName": "AsignaSalones.App.Persistencia",
-        "projectPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj",
+        "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj",
         "packagesPath": "C:\\Users\\Wil\\.nuget\\packages\\",
-        "outputPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Persistencia\\obj\\",
+        "outputPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Persistencia\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wil\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -143,8 +143,8 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
-                "projectPath": "C:\\MisionTic-C3\\AsignaSalones\\AsignaSalones.App\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj"
+              "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
+                "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj"
               }
             }
           }

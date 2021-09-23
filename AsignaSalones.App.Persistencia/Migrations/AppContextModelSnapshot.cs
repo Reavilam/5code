@@ -78,7 +78,44 @@ namespace AsignaSalones.App.Persistencia.Migrations
 
                     b.HasIndex("salonAsignadoid");
 
-                    b.ToTable("HorarioClase");
+                    b.ToTable("HorariosClases");
+                });
+
+            modelBuilder.Entity("AsignaSalones.App.Dominio.Matricula", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<int?>("clase_1id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("clase_2id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("clase_3id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("clase_4id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("estudianteid")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("clase_1id");
+
+                    b.HasIndex("clase_2id");
+
+                    b.HasIndex("clase_3id");
+
+                    b.HasIndex("clase_4id");
+
+                    b.HasIndex("estudianteid");
+
+                    b.ToTable("Matriculas");
                 });
 
             modelBuilder.Entity("AsignaSalones.App.Dominio.Persona", b =>
@@ -101,8 +138,8 @@ namespace AsignaSalones.App.Persistencia.Migrations
                     b.Property<string>("estadoCovid")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("identificacion")
-                        .HasColumnType("int");
+                    b.Property<string>("identificacion")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("nombre")
                         .HasColumnType("nvarchar(max)");
@@ -161,16 +198,11 @@ namespace AsignaSalones.App.Persistencia.Migrations
                 {
                     b.HasBaseType("AsignaSalones.App.Dominio.Persona");
 
-                    b.Property<int?>("HorarioClaseid")
-                        .HasColumnType("int");
-
                     b.Property<string>("carrera")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("semestre")
                         .HasColumnType("int");
-
-                    b.HasIndex("HorarioClaseid");
 
                     b.HasDiscriminator().HasValue("Estudiante");
                 });
@@ -226,16 +258,37 @@ namespace AsignaSalones.App.Persistencia.Migrations
                     b.Navigation("salonAsignado");
                 });
 
-            modelBuilder.Entity("AsignaSalones.App.Dominio.Estudiante", b =>
+            modelBuilder.Entity("AsignaSalones.App.Dominio.Matricula", b =>
                 {
-                    b.HasOne("AsignaSalones.App.Dominio.HorarioClase", null)
-                        .WithMany("estudiantes")
-                        .HasForeignKey("HorarioClaseid");
-                });
+                    b.HasOne("AsignaSalones.App.Dominio.HorarioClase", "clase_1")
+                        .WithMany()
+                        .HasForeignKey("clase_1id");
 
-            modelBuilder.Entity("AsignaSalones.App.Dominio.HorarioClase", b =>
-                {
-                    b.Navigation("estudiantes");
+                    b.HasOne("AsignaSalones.App.Dominio.HorarioClase", "clase_2")
+                        .WithMany()
+                        .HasForeignKey("clase_2id");
+
+                    b.HasOne("AsignaSalones.App.Dominio.HorarioClase", "clase_3")
+                        .WithMany()
+                        .HasForeignKey("clase_3id");
+
+                    b.HasOne("AsignaSalones.App.Dominio.HorarioClase", "clase_4")
+                        .WithMany()
+                        .HasForeignKey("clase_4id");
+
+                    b.HasOne("AsignaSalones.App.Dominio.Estudiante", "estudiante")
+                        .WithMany()
+                        .HasForeignKey("estudianteid");
+
+                    b.Navigation("clase_1");
+
+                    b.Navigation("clase_2");
+
+                    b.Navigation("clase_3");
+
+                    b.Navigation("clase_4");
+
+                    b.Navigation("estudiante");
                 });
 
             modelBuilder.Entity("AsignaSalones.App.Dominio.SedeUniversidad", b =>
