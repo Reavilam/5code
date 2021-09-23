@@ -8,13 +8,13 @@ namespaceAsignaSalones.App.Persistencia
         //GetAllDirectivos
         IEnumerable<Directivo> GetAllDirectivos();
         //AddDirectivo
-        Directivo AddDirectivo(Directivo Directivo);
+        Directivo AddDirectivo(Directivo directivo);
         //UpdateDirectivo
-        Directivo UpdateDirectivo(Directivo Directivo);
+        Directivo UpdateDirectivo(Directivo directivo);
         //DeleteDirectivo
-        void DeleteDirectivo(int idDirectivo);
+        void DeleteDirectivo(int iddirectivo);
         //GetDirectivo
-        Directivo GetDirectivo(int idDirectivo);
+        Directivo GetDirectivo(int iddirectivo);
 
     }
 }
