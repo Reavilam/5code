@@ -49,7 +49,7 @@ namespace AsignaSalones.App.Persistencia
             return profesorEncontrado;
         }
 
-         IEnumerable<Profesor> IRepositorioProfesor.GetAllProfesor()
+        IEnumerable<Profesor> IRepositorioProfesor.GetAllProfesores()
         {
             return _appContext.profesores;
         }

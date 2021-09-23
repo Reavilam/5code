@@ -8,13 +8,13 @@ namespace AsignaSalones.App.Persistencia
         //GetAllEstudiantes
         IEnumerable<Estudiante> GetAllEstudiantes();
         //AddEstudiante
-        Estudiante AddEstudiante(Estudiante Estudiante);
+        Estudiante AddEstudiante(Estudiante estudiante);
         //UpdateEstudiante
-        Estudiante UpdateEstudiante(Estudiante Estudiante);
+        Estudiante UpdateEstudiante(Estudiante estudiante);
         //DeleteEstudiante
-        void DeleteEstudiante(int idEstudiante);
+        void DeleteEstudiante(int idestudiante);
         //GetEstudiante
-        Estudiante GetEstudiante(int idEstudiante);
+        Estudiante GetEstudiante(int idestudiante);
 
     }
 }
