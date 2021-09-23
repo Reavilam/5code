@@ -49,7 +49,7 @@ namespace AsignaSalones.App.Persistencia
             return directivoEncontrado;
         }
 
-         IEnumerable<Directivo> IRepositorioDirectivo.GetAllDirectivo()
+        IEnumerable<Directivo> IRepositorioDirectivo.GetAllDirectivos()
         {
             return _appContext.directivos;
         }
