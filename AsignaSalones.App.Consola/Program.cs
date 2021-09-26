@@ -9,6 +9,9 @@ namespace AsignaSalones.App.Consola
     class Program
     {
         private static IRepositorioSedeUniversidad _repoSedeUniversidad = new RepositorioSedeUniversidad(new Persistencia.AppContext());
+        private static IRepositorioHorarioClase _repoHorarioClase = new RepositorioHorarioClase(new Persistencia.AppContext());
+        private static IRepositorioPersonalAseo _repoPersonalAseo = new RepositorioPersonalAseo(new Persistencia.AppContext());
+        private static IRepositorioMatricula _repoMatricula = new RepositorioMatricula(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -18,7 +21,14 @@ namespace AsignaSalones.App.Consola
             //EliminarSedeUniversidad(3);
             //BuscarSedeUniversidad();
             ActualizarSedeUniversidad();
-            Console.WriteLine("Fin del programa");
+            Console.WriteLine("Fin del programa parte Alberto");
+            //------------------------------------------------------------------------
+            //PARTE WILTON: HorarioClase, PersonalAseo y Matricula
+
+            AddHorarioClase();
+
+            //------------------------------------------------------------------------
+
         }
 
 
@@ -71,6 +81,241 @@ namespace AsignaSalones.App.Consola
             }
             //Console.WriteLine(sedesUniversidad.First().nombre);
         }
+        //---------------------------------------------------------------------------------
+        //#################################################################################    
+        //OPERACIONES CRUD PARA HorarioClase
+        ////AddHorarioClase (Create)
+        private static void AddHorarioClase()
+        {
+            DateTime horario = Convert.ToDateTime("2021-01-01 08:00");
+            var horarioClase = new HorarioClase            
+            {
+                nombre = "Calculo 1",
+                //profesor = _repoProfesor.GetProfesor(2),
+                profesor = null,
+                cantPersonas = 10,
+                salonAsignado = null,
+                hora = horario
+            };
 
+            Console.WriteLine(horarioClase.nombre + " " + horarioClase.hora.ToString("t"));
+            if (_repoHorarioClase.AddHorarioClase(horarioClase) != null)
+                Console.WriteLine("Registro de horario de clase creado");
+        }
+        //GetHorarioClase (Read)
+        private static void BuscarHorarioClase(int idHorarioClase)
+        {
+            try
+            {
+                 var horarioClase = _repoHorarioClase.GetHorarioClase(idHorarioClase);
+                 Console.WriteLine(horarioClase.nombre + " " + horarioClase.hora.ToString("t"));
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarHorarioClase: " + e.Message);
+            }
+        }
+        //UpdateHorarioClase (Update)
+        private static void ActualizarHorarioClase()
+        {
+            DateTime horario = Convert.ToDateTime("2021-01-01 09:00");
+            var horarioClase = new HorarioClase            
+            {
+                id = 1,
+                nombre = "Calculo 1",
+                //profesor = _repoProfesor.GetProfesor(2),
+                profesor = null,
+                cantPersonas = 10,
+                salonAsignado = null,
+                hora = horario
+            };
+
+            Console.WriteLine(horarioClase.nombre + " " + horarioClase.hora.ToString("t"));
+            if (_repoHorarioClase.UpdateHorarioClase(horarioClase) != null)
+                Console.WriteLine("Registro de horario de clase actualizado");
+        }
+        //DeleteHorarioClase (Delete)
+        private static void EliminarHorarioClase(int idHorarioClase)
+        {
+            try
+            {
+                 _repoHorarioClase.DeleteHorarioClase(idHorarioClase);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@EliminarHorarioClase: " + e.Message);
+            }
+        }
+        //GetAllHorariosClases
+        private static void BuscarHorariosClases()
+        {
+            try
+            {
+                IEnumerable<HorarioClase> horariosClases = _repoHorarioClase.GetAllHorariosClases();
+                foreach (var horarioClase in horariosClases)
+                {
+                    Console.WriteLine(horarioClase.id + " " + horarioClase.nombre + " " + horarioClase.hora.ToString("t"));//.ToString("t") imprime solo la hora del DateTime
+                }
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarHorariosClases:"+e.Message);
+            }
+        }
+        //##############################################################################
+        //OPERACIONES CRUD PARA PersonalAseo
+        //AddPersonalAseo (Create)
+        private static void AddPersonalAseo()
+        {
+            var personalAseo = new PersonalAseo
+            {
+                nombre = "Albeiro",
+                apellidos = "Leon",
+                identificacion = "9000001",
+                edad = 40,
+                estadoCovid = "negativo",
+                turno = 1
+            };
+            if (_repoPersonalAseo.AddPersonalAseo(personalAseo) != null)
+                Console.WriteLine("Registro de personal de aseo creado");
+        }
+
+        //GetPersonalAseo (Read)
+        private static void BuscarPersonalAseo(int idPersonalAseo)
+        {
+            try
+            {
+                 var personalAseo = _repoPersonalAseo.GetPersonalAseo(idPersonalAseo);
+                 Console.WriteLine(personalAseo.nombre + ", turno: " + personalAseo.turno); 
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarPersonalAseo:\n " + e.Message);
+            }
+        }
+
+        //UpdatePersonalAseo (Update)
+        private static void ActualizarPersonalAseo()
+        {
+            var personalAseo = new PersonalAseo
+            {
+                id = 1,
+                nombre = "Albeiro",
+                apellidos = "Leon",
+                identificacion = "9000001",
+                edad = 41,
+                estadoCovid = "negativo",
+                turno = 1 
+            };
+            if (_repoPersonalAseo.UpdatePersonalAseo(personalAseo) != null)
+                Console.WriteLine("Registro de personal de aseo actualizado");
+        }
+
+        //DeletePersonalAseo (Delete)
+        private static void EliminarPersonalAseo(int idPersonalAseo)
+        {
+            try
+            {
+                 _repoPersonalAseo.DeletePersonalAseo(idPersonalAseo);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@EliminarPersonalAseo: " + e.Message);
+            }
+        }
+
+        //GetAllPersonalAseo
+        private static void BuscarPersonalAseo()
+        {
+            try
+            {
+                IEnumerable<PersonalAseo> personasAseo = _repoPersonalAseo.GetAllPersonasAseo();
+                foreach (var personalAseo in personasAseo)
+                {
+                    Console.WriteLine(personalAseo.id + " " + personalAseo.nombre + " " + personalAseo.turno);
+                }
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarPersonalAseo:"+e.Message);
+            }
+        }
+        //##############################################################################
+        //OPERACIONES CRUD PARA Matricula
+        //AddMatricula (Create)
+        private static void AddMatricula()
+        {
+            var matricula = new Matricula
+            {
+                estudiante = null, //_repoEstudiante.GetEstudiante(1);
+                clase_1 = null, //_repoHorarioClase.GetHorarioClase(1);
+                clase_2 = null, //_repoHorarioClase.GetHorarioClase(2);
+                clase_3 = null, //_repoHorarioClase.GetHorarioClase(3);
+                clase_4 = null //_repoHorarioClase.GetHorarioClase(4);
+            };
+            if (_repoMatricula.AddMatricula(matricula) != null)
+                Console.WriteLine("Registro matricula creado");
+        }
+
+        //GetMatricula (Read)
+        private static void BuscarMatricula(int idMatricula)
+        {
+            try
+            {
+                 var matricula = _repoMatricula.GetMatricula(idMatricula);
+                 Console.WriteLine("Matricula no. " + matricula.id + "de " + matricula.estudiante.nombre + " " + matricula.estudiante.apellidos);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarMatricula:\n " + e.Message);
+            }
+        }
+
+        //UpdateMatricula (Update)
+        private static void ActualizarMatricula()
+        {
+            var matricula = new Matricula
+            {
+                id = 1,
+                estudiante = null, //_repoEstudiante.GetEstudiante(1),
+                clase_1 = null, //_repoHorarioClase.GetHorarioClase(1),
+                clase_2 = null, //_repoHorarioClase.GetHorarioClase(2),
+                clase_3 = null, //_repoHorarioClase.GetHorarioClase(3),
+                clase_4 = null //_repoHorarioClase.GetHorarioClase(4)
+            };
+            if (_repoMatricula.UpdateMatricula(matricula) != null)
+                Console.WriteLine("Registro de matricula actualizado");            
+        }
+
+        //DeleteMatricula (Delete)
+        private static void EliminarMatricula(int idMatricula)
+        {
+            try
+            {
+                 _repoMatricula.DeleteMatricula(idMatricula);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@EliminarMatricula: " + e.Message);
+            }
+        }
+
+        //GetAllMatriculas
+        private static void BuscarMatriculas()
+        {
+            try
+            {
+                IEnumerable<Matricula> matriculas = _repoMatricula.GetAllMatriculas();
+                foreach (var matricula in matriculas)
+                {
+                    Console.WriteLine("Matricula no. " + matricula.id + "de " + matricula.estudiante.nombre + " " + matricula.estudiante.apellidos);
+                }
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarMatriculas:\n"+e.Message);
+            }
+        }
+        //############################################################################
     }
 }
