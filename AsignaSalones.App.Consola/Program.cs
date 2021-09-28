@@ -20,13 +20,26 @@ namespace AsignaSalones.App.Consola
             //BuscarSedeUniversidad(2);
             //EliminarSedeUniversidad(3);
             //BuscarSedeUniversidad();
-            ActualizarSedeUniversidad();
+            //ActualizarSedeUniversidad();
             Console.WriteLine("Fin del programa parte Alberto");
             //------------------------------------------------------------------------
-            //PARTE WILTON: HorarioClase, PersonalAseo y Matricula
+            //CRUD PARTE WILTON: HorarioClase, PersonalAseo y Matricula
 
-            AddHorarioClase();
+            //AddHorarioClase();
+            //BuscarHorarioClase(5);
+            //ActualizarHorarioClase();
+            //EliminarHorarioClase(6);
+            BuscarHorariosClases();
 
+            //AddPersonalAseo();
+            //BuscarPersonalAseo(3);
+            //ActualizarPersonalAseo();
+            //EliminarPersonalAseo(4);
+            //BuscarPersonasAseo();
+
+            AddMatricula();
+            //BuscarMatricula(1);
+            //BuscarMatriculas();
             //------------------------------------------------------------------------
 
         }
@@ -87,13 +100,13 @@ namespace AsignaSalones.App.Consola
         ////AddHorarioClase (Create)
         private static void AddHorarioClase()
         {
-            DateTime horario = Convert.ToDateTime("2021-01-01 08:00");
+            DateTime horario = Convert.ToDateTime("2021-01-01 09:00");
             var horarioClase = new HorarioClase            
             {
                 nombre = "Calculo 1",
                 //profesor = _repoProfesor.GetProfesor(2),
                 profesor = null,
-                cantPersonas = 10,
+                cantPersonas = 5,
                 salonAsignado = null,
                 hora = horario
             };
@@ -125,7 +138,7 @@ namespace AsignaSalones.App.Consola
                 nombre = "Calculo 1",
                 //profesor = _repoProfesor.GetProfesor(2),
                 profesor = null,
-                cantPersonas = 10,
+                cantPersonas = 15,
                 salonAsignado = null,
                 hora = horario
             };
@@ -169,12 +182,12 @@ namespace AsignaSalones.App.Consola
         {
             var personalAseo = new PersonalAseo
             {
-                nombre = "Albeiro",
-                apellidos = "Leon",
-                identificacion = "9000001",
-                edad = 40,
+                nombre = "Lina",
+                apellidos = "Perez",
+                identificacion = "1234009",
+                edad = 46,
                 estadoCovid = "negativo",
-                turno = 1
+                turno = 2
             };
             if (_repoPersonalAseo.AddPersonalAseo(personalAseo) != null)
                 Console.WriteLine("Registro de personal de aseo creado");
@@ -205,7 +218,7 @@ namespace AsignaSalones.App.Consola
                 identificacion = "9000001",
                 edad = 41,
                 estadoCovid = "negativo",
-                turno = 1 
+                turno = 2 
             };
             if (_repoPersonalAseo.UpdatePersonalAseo(personalAseo) != null)
                 Console.WriteLine("Registro de personal de aseo actualizado");
@@ -225,14 +238,14 @@ namespace AsignaSalones.App.Consola
         }
 
         //GetAllPersonalAseo
-        private static void BuscarPersonalAseo()
+        private static void BuscarPersonasAseo()
         {
             try
             {
                 IEnumerable<PersonalAseo> personasAseo = _repoPersonalAseo.GetAllPersonasAseo();
                 foreach (var personalAseo in personasAseo)
                 {
-                    Console.WriteLine(personalAseo.id + " " + personalAseo.nombre + " " + personalAseo.turno);
+                    Console.WriteLine(personalAseo.id + " " + personalAseo.nombre + "- turno " + personalAseo.turno);
                 }
             }
             catch (System.Exception e)
@@ -245,13 +258,15 @@ namespace AsignaSalones.App.Consola
         //AddMatricula (Create)
         private static void AddMatricula()
         {
+            HorarioClase horarioClase1 = _repoHorarioClase.GetHorarioClase(1);
+            Console.WriteLine(horarioClase1.id + horarioClase1.nombre);
             var matricula = new Matricula
             {
-                estudiante = null, //_repoEstudiante.GetEstudiante(1);
-                clase_1 = null, //_repoHorarioClase.GetHorarioClase(1);
-                clase_2 = null, //_repoHorarioClase.GetHorarioClase(2);
-                clase_3 = null, //_repoHorarioClase.GetHorarioClase(3);
-                clase_4 = null //_repoHorarioClase.GetHorarioClase(4);
+                estudiante = null, //_repoEstudiante.GetEstudiante(1),
+                clase_1 = horarioClase1,
+                clase_2 = null, //_repoHorarioClase.GetHorarioClase(2),
+                clase_3 = null, //_repoHorarioClase.GetHorarioClase(3),
+                clase_4 = null //_repoHorarioClase.GetHorarioClase(4)
             };
             if (_repoMatricula.AddMatricula(matricula) != null)
                 Console.WriteLine("Registro matricula creado");
@@ -278,8 +293,8 @@ namespace AsignaSalones.App.Consola
             {
                 id = 1,
                 estudiante = null, //_repoEstudiante.GetEstudiante(1),
-                clase_1 = null, //_repoHorarioClase.GetHorarioClase(1),
-                clase_2 = null, //_repoHorarioClase.GetHorarioClase(2),
+                clase_1 = _repoHorarioClase.GetHorarioClase(1),
+                clase_2 = _repoHorarioClase.GetHorarioClase(3),
                 clase_3 = null, //_repoHorarioClase.GetHorarioClase(3),
                 clase_4 = null //_repoHorarioClase.GetHorarioClase(4)
             };

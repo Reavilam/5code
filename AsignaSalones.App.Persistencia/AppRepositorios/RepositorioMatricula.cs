@@ -14,7 +14,7 @@ namespace AsignaSalones.App.Persistencia
 
         Matricula IRepositorioMatricula.AddMatricula(Matricula matricula)
         {
-            var matriculaAdicionada = _appContext.Matriculas.Add(matricula);
+            var matriculaAdicionada = _appContext.Matriculas.Attach(matricula);
             _appContext.SaveChanges();
             return matriculaAdicionada.Entity ; 
         }
