@@ -347,7 +347,7 @@ namespace AsignaSalones.App.Consola
             {
                 nombre = "John",
                 apellidos = "Doe",
-                identificacion = 1000001,
+                identificacion = "1000001",
                 edad = 19,
                 estadoCovid = "negativo",
                 carrera = "Ingenieria Informatica",
@@ -365,7 +365,7 @@ namespace AsignaSalones.App.Consola
             try
             {
                 var estudiante = _repoEstudiante.GetEstudiante(idEstudiante);
-                Console.WriteLine( estudiante.nombre + estudiante.apellidos);
+                Console.WriteLine( "{0} {1}", estudiante.nombre, estudiante.apellidos);
             }
             catch (System.Exception e)
             {
