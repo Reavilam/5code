@@ -12,6 +12,7 @@ namespace AsignaSalones.App.Consola
         private static IRepositorioHorarioClase _repoHorarioClase = new RepositorioHorarioClase(new Persistencia.AppContext());
         private static IRepositorioPersonalAseo _repoPersonalAseo = new RepositorioPersonalAseo(new Persistencia.AppContext());
         private static IRepositorioMatricula _repoMatricula = new RepositorioMatricula(new Persistencia.AppContext());
+        private static IRepositorioPersonalAseo _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -332,5 +333,41 @@ namespace AsignaSalones.App.Consola
             }
         }
         //############################################################################
+
+        //##############################################################################
+        //OPERACIONES CRUD PARA ESTUDIANTE
+        //----------------
+        //AddEstudiante
+        private static void AddEstudiante()
+        {
+            var estudiante = new Estudiante            
+            {
+                nombre = "John",
+                apellidos = "Doe",
+                identificacion = 1000001,
+                edad = 19,
+                estadoCovid = "negativo",
+                carrera = "Ingenieria Informatica",
+                semestre = 1
+            };
+
+            Console.WriteLine(estudiante.nombre + " " + estudiante.apellidos);
+            if (_repoEstudiante.AddEstudiante(estudiante) != null)
+                Console.WriteLine("Registro de estudiante adicionado");
+        }
+
+        //GetEstudiante
+        private static void BuscarEstudiante(int idEstudiante)
+        {
+            try
+            {
+                var estudiante = _repoEstudiante.GetEstudiante(idEstudiante);
+                Console.WriteLine( estudiante.nombre + estudiante.apellidos);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarEstudiante:\n" + e.Message);
+            }
+        }
     }
 }
