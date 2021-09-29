@@ -17,6 +17,8 @@ namespace AsignaSalones.App.Consola
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Esto es un mensaje por consola");
+            //------------------------------------------------------------------------
+            //CRUD PARTE Alberto: sede universidad
             //AddSedeUniversidad();
             //BuscarSedeUniversidad(2);
             //EliminarSedeUniversidad(3);
