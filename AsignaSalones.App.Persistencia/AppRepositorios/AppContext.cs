@@ -12,7 +12,7 @@ namespace AsignaSalones.App.Persistencia
         public DbSet<Directivo> Directivos { get; set; }
         public DbSet<Estudiante> Estudiantes { get; set; }
         public DbSet<PersonalAseo> PersonasAseo { get; set; }
-        public DbSet<Contagiado> Contagiados { get; set; }
+        public DbSet<Contagiado> Contagiado { get; set; }
         public DbSet<SedeUniversidad> SedesUniversidad { get; set; }
         public DbSet<Salon> Salones { get; set; }      
         

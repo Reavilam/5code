@@ -6,7 +6,7 @@ namespace AsignaSalones.App.Persistencia
     public interface IRepositorioContagiado 
     {
         //GetAllContagiado
-        IEnumerable<Contagiado> GetAllContagiados();
+        IEnumerable<Contagiado> GetAllContagiado();
         //AddContagiado
         Contagiado AddContagiado(Contagiado Contagiado);
         //UpdateContagiado
