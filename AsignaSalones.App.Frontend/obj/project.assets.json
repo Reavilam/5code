@@ -1495,7 +1495,7 @@
       },
       "AsignaSalones.App.Persistencia/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AsignaSalones.App.Dominio": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
