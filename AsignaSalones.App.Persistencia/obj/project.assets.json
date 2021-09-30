@@ -7263,19 +7263,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Wil\\.nuget\\packages\\": {}
+    "C:\\Users\\sebas\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj",
+      "projectUniqueName": "C:\\5code\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj",
       "projectName": "AsignaSalones.App.Persistencia",
-      "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj",
-      "packagesPath": "C:\\Users\\Wil\\.nuget\\packages\\",
-      "outputPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Persistencia\\obj\\",
+      "projectPath": "C:\\5code\\AsignaSalones.App.Persistencia\\AsignaSalones.App.Persistencia.csproj",
+      "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+      "outputPath": "C:\\5code\\AsignaSalones.App.Persistencia\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Wil\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -7286,8 +7286,8 @@
       "frameworks": {
         "netstandard2.1": {
           "projectReferences": {
-            "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
-              "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj"
+            "C:\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
+              "projectPath": "C:\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj"
             }
           }
         }
@@ -7337,7 +7337,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.411\\RuntimeIdentifierGraph.json"
       }
     }
   }
