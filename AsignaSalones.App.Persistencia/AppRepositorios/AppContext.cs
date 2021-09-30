@@ -24,21 +24,21 @@ namespace AsignaSalones.App.Persistencia
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-                .UseSqlServer("Data Source = (Localdb)\\MSSQLLocalDB; Initial Catalog = AsignaSalones3");
+                .UseSqlServer("Data Source = (Localdb)\\MSSQLLocalDB; Initial Catalog = AsignaSalones2");
             }
 
         }
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder
-            .Entity<HorarioClase>()
-            .Property(d => d.id)
-            .ValueGeneratedOnAdd(); 
+        // protected override void OnModelCreating(ModelBuilder modelBuilder)
+        // {
+        //     modelBuilder
+        //     .Entity<HorarioClase>()
+        //     .Property(d => d.id)
+        //     .ValueGeneratedOnAdd(); 
 
-            modelBuilder
-            .Entity<HorarioClase>()
-            .HasKey(d => d.id);
-        }
+        //     modelBuilder
+        //     .Entity<HorarioClase>()
+        //     .HasKey(d => d.id);
+        // }
     }
     
 }

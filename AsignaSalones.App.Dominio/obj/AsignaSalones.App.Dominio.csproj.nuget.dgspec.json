@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {}
+    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {}
   },
   "projects": {
-    "C:\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
+    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
+        "projectUniqueName": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
         "projectName": "AsignaSalones.App.Dominio",
-        "projectPath": "C:\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
-        "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
-        "outputPath": "C:\\5code\\AsignaSalones.App.Dominio\\obj\\",
+        "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\AsignaSalones.App.Dominio.csproj",
+        "packagesPath": "C:\\Users\\Wil\\.nuget\\packages\\",
+        "outputPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Wil\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
@@ -53,7 +53,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.411\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.412\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,26 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.EstudiantesModel
+@{
+}
+<h1>Lista de Estudiantes</h1>
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Doc ID</th>
+    </tr>
+    @foreach (var estudiante in Model.Estudiantes)
+    {
+        <tr>
+            <td>@estudiante.nombre</td>
+            <td>@estudiante.apellidos</td>
+            <td>@estudiante.identificacion</td>            
+            <td>
+                <a class="btn btn-primary table-btn" asp-page="./DetalleEstudiante" asp-route-estudianteId="@estudiante.id">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                </a>
+            </td>
+        </tr>
+                
+    }
+</table>

@@ -15,14 +15,14 @@ namespace AsignaSalones.App.Persistencia
 
         Contagiado IRepositorioContagiado.AddContagiado(Contagiado contagiado)
         {
-            var contagiadoAdicionado = _appContext.Contagiado.Add(contagiado) ;
+            var contagiadoAdicionado = _appContext.Contagiados.Add(contagiado) ;
             _appContext.SaveChanges();
             return contagiadoAdicionado.Entity;
         }
 
         Contagiado IRepositorioContagiado.UpdateContagiado(Contagiado contagiado)
         {
-            var contagiadoEncontrado = _appContext.Contagiado.FirstOrDefault(c => c.id == contagiado.id);
+            var contagiadoEncontrado = _appContext.Contagiados.FirstOrDefault(c => c.id == contagiado.id);
             if (contagiadoEncontrado != null)
             {
 
@@ -37,22 +37,22 @@ namespace AsignaSalones.App.Persistencia
 
         void IRepositorioContagiado.DeleteContagiado(int idContagiado)
         {
-            var contagiadoEncontrado = _appContext.Contagiado.FirstOrDefault(c => c.id == idContagiado);
+            var contagiadoEncontrado = _appContext.Contagiados.FirstOrDefault(c => c.id == idContagiado);
             if (contagiadoEncontrado == null)
                 return;
-            _appContext.Contagiado.Remove(contagiadoEncontrado);
+            _appContext.Contagiados.Remove(contagiadoEncontrado);
             _appContext.SaveChanges();
         }
 
         Contagiado IRepositorioContagiado.GetContagiado(int idContagiado)
         {
-            var contagiadoEncontrado = _appContext.Contagiado.FirstOrDefault(c => c.id == idContagiado);
+            var contagiadoEncontrado = _appContext.Contagiados.FirstOrDefault(c => c.id == idContagiado);
             return contagiadoEncontrado;
         }
 
-        IEnumerable<Contagiado> IRepositorioContagiado.GetAllContagiado()
+        IEnumerable<Contagiado> IRepositorioContagiado.GetAllContagiados()
         {
-            return _appContext.Contagiado;
+            return _appContext.Contagiados;
         }
     }
 }
