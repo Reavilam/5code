@@ -13,6 +13,9 @@ namespace AsignaSalones.App.Consola
         private static IRepositorioPersonalAseo _repoPersonalAseo = new RepositorioPersonalAseo(new Persistencia.AppContext());
         private static IRepositorioMatricula _repoMatricula = new RepositorioMatricula(new Persistencia.AppContext());
         private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
+        private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
+
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -32,7 +35,7 @@ namespace AsignaSalones.App.Consola
             //BuscarHorarioClase(5);
             //ActualizarHorarioClase();
             //EliminarHorarioClase(6);
-            BuscarHorariosClases();
+            //BuscarHorariosClases();
 
             //AddPersonalAseo();
             //BuscarPersonalAseo(3);
@@ -44,8 +47,8 @@ namespace AsignaSalones.App.Consola
             //BuscarMatricula(1);
             //BuscarMatriculas();
 
-            AddEstudiante();
-            BuscarEstudiante(1);
+            //AddEstudiante();
+            //BuscarEstudiante(1);
             //------------------------------------------------------------------------
 
         }
@@ -373,6 +376,58 @@ namespace AsignaSalones.App.Consola
             {
                 Console.WriteLine("Error@BuscarEstudiante:\n" + e.Message);
             }
+        }
+        //############################################################################
+
+        //##############################################################################
+        //OPERACIONES CRUD PARA SALON
+        //----------------
+        //AddSalon
+
+        private static void AddSalon()
+        {
+            var salon = new Salon
+            {
+               aforo = 8
+               
+            };
+
+            _repoSalon.AddSalon(salon);
+        }
+        //GetSalon
+        private static void BuscarSalon(int idSalon)
+        {
+            var salon = _repoSalon.GetSalon(idSalon);
+            Console.WriteLine("Aforo:  "+salon.aforo);
+        }
+        //DeleteSalon
+
+        private static void EliminarSalon(int idSalon)
+        {
+            _repoSalon.DeleteSalon(idSalon);
+        }
+        //UpdateSalon
+        private static void ActualizarSalon()
+        {
+            var salon = new Salon 
+            {
+               aforo = 4
+            };
+            Salon salon_retornado =_repoSalon.UpdateSalon(salon);                         
+            if (salon_retornado!=null)
+                Console.WriteLine("Se registró un salon en la base de datos");
+        
+        }
+        //GetAllSalones
+        private static void BuscarSalones()
+        {
+            IEnumerable<Salon> salones = _repoSalon.GetAllSalones();
+            
+            foreach (var salon in salones)
+            {
+                Console.WriteLine(salon.nombre);
+            }
+            //Console.WriteLine(salones.First().nombre);
         }
     }
 }
