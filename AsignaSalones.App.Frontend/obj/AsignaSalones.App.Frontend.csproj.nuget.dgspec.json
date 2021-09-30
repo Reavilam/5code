@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\AsignaSalones.App.Frontend\\AsignaSalones.App.Frontend.csproj": {}
+    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Frontend\\AsignaSalones.App.Frontend.csproj": {}
   },
   "projects": {
-    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\AsignaSalones.App.Frontend\\AsignaSalones.App.Frontend.csproj": {
+    "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Frontend\\AsignaSalones.App.Frontend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\AsignaSalones.App.Frontend\\AsignaSalones.App.Frontend.csproj",
+        "projectUniqueName": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Frontend\\AsignaSalones.App.Frontend.csproj",
         "projectName": "AsignaSalones.App.Frontend",
-        "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\AsignaSalones.App.Frontend\\AsignaSalones.App.Frontend.csproj",
+        "projectPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Frontend\\AsignaSalones.App.Frontend.csproj",
         "packagesPath": "C:\\Users\\Wil\\.nuget\\packages\\",
-        "outputPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Consola\\AsignaSalones.App.Frontend\\obj\\",
+        "outputPath": "C:\\MisionTic-C3\\5code\\AsignaSalones.App.Frontend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Wil\\AppData\\Roaming\\NuGet\\NuGet.Config"
