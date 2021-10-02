@@ -13,15 +13,10 @@ namespace AsignaSalones.App.Consola
         private static IRepositorioPersonalAseo _repoPersonalAseo = new RepositorioPersonalAseo(new Persistencia.AppContext());
         private static IRepositorioMatricula _repoMatricula = new RepositorioMatricula(new Persistencia.AppContext());
         private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
-        private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
-
-
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
             Console.WriteLine("Esto es un mensaje por consola");
-            //------------------------------------------------------------------------
-            //CRUD PARTE Alberto: sede universidad
             //AddSedeUniversidad();
             //BuscarSedeUniversidad(2);
             //EliminarSedeUniversidad(3);
@@ -35,7 +30,7 @@ namespace AsignaSalones.App.Consola
             //BuscarHorarioClase(5);
             //ActualizarHorarioClase();
             //EliminarHorarioClase(6);
-            //BuscarHorariosClases();
+            BuscarHorariosClases();
 
             //AddPersonalAseo();
             //BuscarPersonalAseo(3);
@@ -47,8 +42,8 @@ namespace AsignaSalones.App.Consola
             //BuscarMatricula(1);
             //BuscarMatriculas();
 
-            //AddEstudiante();
-            //BuscarEstudiante(1);
+            AddEstudiante();
+            BuscarEstudiante(1);
             //------------------------------------------------------------------------
 
         }
@@ -352,7 +347,7 @@ namespace AsignaSalones.App.Consola
             {
                 nombre = "John",
                 apellidos = "Doe",
-                identificacion = "1000001",
+                identificacion = 1000001,
                 edad = 19,
                 estadoCovid = "negativo",
                 carrera = "Ingenieria Informatica",
@@ -370,64 +365,244 @@ namespace AsignaSalones.App.Consola
             try
             {
                 var estudiante = _repoEstudiante.GetEstudiante(idEstudiante);
-                Console.WriteLine( "{0} {1}", estudiante.nombre, estudiante.apellidos);
+                Console.WriteLine( estudiante.nombre + estudiante.apellidos);
             }
             catch (System.Exception e)
             {
                 Console.WriteLine("Error@BuscarEstudiante:\n" + e.Message);
             }
         }
+        
+        
+        //UpdateEstudiante (Update)
+        private static void ActualizarEstudiante()
+        {
+            var estudiante = new Estudiante
+            {
+                nombre = "Wilton";
+                apellidos = "Mendez";
+                identificacion = "102038761";
+                edad = 21;
+                estadoCovid = "negativo";
+                carrera = "Fisica";
+                semestre = "3";
+
+           
+            };
+            if (_repoEstudiante.UpdateEstudiante(estudiante) != null)
+                Console.WriteLine("Registro de Estudiante actualizado");
+        }
+        
+
+        //DeleteEstudiante (Delete)
+        private static void EliminarEstudiante(int idEstudiante)
+        {
+            try
+            {
+                 _repoEstudiante.DeleteEstudiante(idEstudiante);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@EliminarEstudiante: " + e.Message);
+            }
+        }
+
+        //GetAllEstudiantes
+        private static void BuscarEstudiante()
+        {
+            try
+            {
+                IEnumerable<Estudiante> estudiante = _repoEstudiante.GetAllEstudiantes();
+                foreach (var estudiante in estudiantes)
+                {
+                    Console.WriteLine("Estudiante no id. " + estudiante.identificacion + "de " + estudiante.nombre + " " + estudiante.apellidos);
+                }
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarEstudiantes:\n"+e.Message);
+            }
+        }
+
+
         //############################################################################
 
         //##############################################################################
-        //OPERACIONES CRUD PARA SALON
-        //----------------
-        //AddSalon
+        //OPERACIONES CRUD PARA PROFESORES
 
-        private static void AddSalon()
+
+        //AddProfesores
+        private static void AddProfesor()
         {
-            var salon = new Salon
+            var profesor = new Profesor
             {
-               aforo = 8
-               
+                nombre = "Alain",
+                apellidos = "Perez",
+                identificacion = 1023401,
+                edad = 50,
+                estadoCovid = "negativo",
+                materia = "Fisica",
+                departamento = 1
             };
 
-            _repoSalon.AddSalon(salon);
+            Console.WriteLine(profesor.nombre + " " + profesor.apellidos);
+            if (_repoProfesor.AddProfesor(profesor) != null)
+                Console.WriteLine("Registro de Profesor adicionado");
         }
-        //GetSalon
-        private static void BuscarSalon(int idSalon)
-        {
-            var salon = _repoSalon.GetSalon(idSalon);
-            Console.WriteLine("Aforo:  "+salon.aforo);
-        }
-        //DeleteSalon
 
-        private static void EliminarSalon(int idSalon)
+        //GetProfesor
+        private static void BuscarProfesor(int idProfesor)
         {
-            _repoSalon.DeleteSalon(idSalon);
-        }
-        //UpdateSalon
-        private static void ActualizarSalon()
-        {
-            var salon = new Salon 
+            try
             {
-               aforo = 4
-            };
-            Salon salon_retornado =_repoSalon.UpdateSalon(salon);                         
-            if (salon_retornado!=null)
-                Console.WriteLine("Se registró un salon en la base de datos");
-        
-        }
-        //GetAllSalones
-        private static void BuscarSalones()
-        {
-            IEnumerable<Salon> salones = _repoSalon.GetAllSalones();
-            
-            foreach (var salon in salones)
-            {
-                Console.WriteLine(salon.nombre);
+                var profesor = _repoProfesor.GetProfesor(idProfesor);
+                Console.WriteLine( profesor.nombre + profesor.apellidos);
             }
-            //Console.WriteLine(salones.First().nombre);
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarProfesor:\n" + e.Message);
+            }
         }
+        
+        
+        //UpdateProfesor (Update)
+        private static void ActualizarProfesor()
+        {
+            var profesor = new Profesor
+            {
+                nombre = "Wilton";
+                apellidos = "Mendez";
+                identificacion = "102038761";
+                edad = 21;
+                estadoCovid = "negativo";
+                carrera = "Fisica";
+                semestre = "3";
+
+           
+            };
+            if (_repoProfesor.UpdateProfesor(profesor) != null)
+                Console.WriteLine("Registro de profesor actualizado");
+        }
+        
+
+        //DeleteProfesor (Delete)
+        private static void EliminarProfesor(int idProfesor)
+        {
+            try
+            {
+                 _repoProfesor.DeleteProfesor(idProfesor);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@EliminarProfesor: " + e.Message);
+            }
+        }
+
+        //GetAllProfesores
+        private static void BuscarProfesor()
+        {
+            try
+            {
+                IEnumerable<Profesor> profesor = _repoProfesor.GetAllProfesores();
+                foreach (var profesor in profesores)
+                {
+                    Console.WriteLine("Profesor no id. " + profesor.identificacion + "de " + profesor.nombre + " " + profesor.apellidos);
+                }
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarProfesores:\n"+e.Message);
+            }
+        }
+        
+
+        //############################################################################
+
+        //##############################################################################
+        //OPERACIONES CRUD PARA DIRECTIVO 
+
+        //AddDirectivo
+        private static void AddDirectivo()
+        {
+            var directivo = new Directivo
+            {
+                nombre = "Zury",
+                apellidos = "Fernandez",
+                identificacion = 1043401,
+                edad = 27,
+                estadoCovid = "negativo",
+                dependencia = "",
+            };
+
+            Console.WriteLine(directivo.nombre + " " + directivo.apellidos);
+            if (_repoDirectivo.AddDirectivo(directivo) != null)
+                Console.WriteLine("Registro de Directivo adicionado");
+        }
+
+        //GetDiretivo
+        private static void BuscarDirectivo(int idDirectivo)
+        {
+            try
+            {
+                var directivo = _repoDirectivo.GetDirectivo(idDirectivo);
+                Console.WriteLine( directivo.nombre + directivo.apellidos);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarDirectivo:\n" + e.Message);
+            }
+        }
+        
+        
+        //UpdateProfesor (Update)
+        private static void ActualizarDirectivo()
+        {
+            var directivo = new Directivo
+            {
+                nombre = "Alberto";
+                apellidos = "Castro";
+                identificacion = "102018761";
+                edad = 38;
+                estadoCovid = "negativo";
+                dependencia ="";
+
+           
+            };
+            if (_repoDirectivo.UpdateDirectivo(directivo) != null)
+                Console.WriteLine("Registro de directivo actualizado");
+        }
+        
+
+        //DeleteDirectivo (Delete)
+        private static void EliminarDirectivo(int idDirectivo)
+        {
+            try
+            {
+                 _repoProfesor.DeleteDirectivo(idDirectivo);
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@EliminarDirectivo: " + e.Message);
+            }
+        }
+
+        //GetAllDirectivos
+        private static void BuscarDirectivo()
+        {
+            try
+            {
+                IEnumerable<Directivo> directivo = _repoDirectivo.GetAllDirectivos();
+                foreach (var directivo in directivos)
+                {
+                    Console.WriteLine("Directivo no id. " + directivo.identificacion + "de " + directivo.nombre + " " + directivo.apellidos);
+                }
+            }
+            catch (System.Exception e)
+            {
+                Console.WriteLine("Error@BuscarDirectivos:\n"+e.Message);
+            }
+        }
+
+
     }
 }
