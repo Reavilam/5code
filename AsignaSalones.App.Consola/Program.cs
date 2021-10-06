@@ -14,12 +14,12 @@ namespace AsignaSalones.App.Consola
         private static IRepositorioMatricula _repoMatricula = new RepositorioMatricula(new Persistencia.AppContext());
         private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
         private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
-
+        private static IRepositorioContagiado  _repoContagiado = new RepositorioContagiado(new Persistencia.AppContext());
 
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("Esto es un mensaje por consola");
+            Console.WriteLine("Esto es por consola");
             //------------------------------------------------------------------------
             //CRUD PARTE Alberto: sede universidad
             //AddSedeUniversidad();
@@ -27,7 +27,7 @@ namespace AsignaSalones.App.Consola
             //EliminarSedeUniversidad(3);
             //BuscarSedeUniversidad();
             //ActualizarSedeUniversidad();
-            Console.WriteLine("Fin del programa parte Alberto");
+            //Console.WriteLine("Fin del programa parte Alberto");
             //------------------------------------------------------------------------
             //CRUD PARTE WILTON: HorarioClase, PersonalAseo y Matricula
 
@@ -50,8 +50,57 @@ namespace AsignaSalones.App.Consola
             //AddEstudiante();
             //BuscarEstudiante(1);
             //------------------------------------------------------------------------
+            //CRUD PARTE Sebastian: Contagiado
+
+            AddContagiado();
+            //BuscarContagiado(1);
+            //DeleteContagiado();
+            //UpdateProfesor();            
+
+            //Console.WriteLine("Fin del programa parte Sebastian");
+
+
+
+            //------------------------------------------------------------------------
 
         }
+
+            //AddContagiado();
+
+        private static void AddContagiado()
+        {
+            var personai = new Persona
+            {
+                nombre = "Julian",
+                apellidos = "Navarrete Molina",
+                identificacion = "231245346",
+                edad = 25,
+                estadoCovid = "Positivo"
+
+            };
+            var contagiado = new Contagiado
+            {
+                persona = personai,
+                fechaContagio =new DateTime(2021,05,25),
+                sintomas = "muy enfermo",
+                periodoAislamiento = new DateTime (2021,06,10)
+            };
+            _repoContagiado.AddContagiado(contagiado);
+        }
+
+            //GetContagiado();
+        private static void BuscarContagiado(int idContagiado)
+        {
+            var contagiado = _repoContagiado.GetContagiado(idContagiado);
+            Console.WriteLine(contagiado.persona+"");
+        }
+
+            //DeleteContagiado();
+            //UpdateProfesor(); 
+
+
+
+
 
 
         //AddSedeUniversidad
@@ -425,7 +474,7 @@ namespace AsignaSalones.App.Consola
             
             foreach (var salon in salones)
             {
-                Console.WriteLine(salon.nombre);
+                //Console.WriteLine(salon.nombre);
             }
             //Console.WriteLine(salones.First().nombre);
         }
