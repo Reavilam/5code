@@ -15,6 +15,8 @@ namespace AsignaSalones.App.Consola
         private static IRepositorioEstudiante _repoEstudiante = new RepositorioEstudiante(new Persistencia.AppContext());
         private static IRepositorioSalon _repoSalon = new RepositorioSalon(new Persistencia.AppContext());
         private static IRepositorioContagiado  _repoContagiado = new RepositorioContagiado(new Persistencia.AppContext());
+        private static IRepositorioProfesor _repoProfesor = new RepositorioProfesor(new Persistencia.AppContext());
+        private static IRepositorioDirectivo _repoDirectivo = new RepositorioDirectivo(new Persistencia.AppContext());
 
         static void Main(string[] args)
         {
