@@ -1,0 +1,21 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.DetalleSedeUniversidadModel
+@{
+}
+<h1>Detalle de Sedes Universidad</h1>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Salones Disponibles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.sedeUniversidad.nombre</td>
+            <td>@Model.sedeUniversidad.numeroSalonesDispHora</td>
+
+        </tr>
+    </tbody>
+</table>
+<a class="nav-link text-dark" asp-area="" asp-page="/Listas/SedesUniversidad">Clases</a>

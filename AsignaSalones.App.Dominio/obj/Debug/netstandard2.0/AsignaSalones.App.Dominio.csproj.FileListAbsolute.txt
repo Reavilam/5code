@@ -25,3 +25,13 @@ C:\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Do
 C:\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.csproj.CoreCompileInputs.cache
 C:\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.dll
 C:\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.pdb
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\bin\Debug\netstandard2.0\AsignaSalones.App.Dominio.deps.json
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\bin\Debug\netstandard2.0\AsignaSalones.App.Dominio.dll
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\bin\Debug\netstandard2.0\AsignaSalones.App.Dominio.pdb
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.csproj.AssemblyReference.cache
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.AssemblyInfoInputs.cache
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.AssemblyInfo.cs
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.csproj.CoreCompileInputs.cache
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.dll
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Dominio\obj\Debug\netstandard2.0\AsignaSalones.App.Dominio.pdb

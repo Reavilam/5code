@@ -1,0 +1,24 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.EliminarSedeUniversidadModel
+@{
+}
+<h1>Se va a eliminar Sede Universidad</h1>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Salones Disponibles</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.sedeUniversidad.nombre</td>
+            <td>@Model.sedeUniversidad.numeroSalonesDispHora</td>
+
+        </tr>
+    </tbody>
+</table>
+<form method="post">
+    <input type="hidden" asp-for="sedeUniversidad.id">
+    <button type="submit" class="btn btn-primary">Confirmar Eliminar</button>
+</form>

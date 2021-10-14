@@ -1,0 +1,16 @@
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\bin\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.deps.json
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\bin\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.runtimeconfig.json
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\bin\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.runtimeconfig.dev.json
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\bin\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.dll
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\bin\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.pdb
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\bin\Debug\netcoreapp3.1\AsignaSalones.App.Dominio.dll
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\bin\Debug\netcoreapp3.1\AsignaSalones.App.Dominio.pdb
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\obj\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.csproj.AssemblyReference.cache
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\obj\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\obj\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.AssemblyInfoInputs.cache
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\obj\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.AssemblyInfo.cs
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\obj\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\obj\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.csproj.CopyComplete
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\obj\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.dll
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\obj\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.pdb
+C:\Users\alber\Documents\Programacion\mintic ciclo3\Asignacion\AsignaSalones.App.git5code\5code\AsignaSalones.App.Persistencia\obj\Debug\netcoreapp3.1\AsignaSalones.App.Persistencia.genruntimeconfig.cache

@@ -1,0 +1,21 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.EditarSedeUniversidadModel
+@{
+}
+<h1>Editar Sedes Universidad</h1>
+<form method="post">
+    <input type="hidden" asp-for="sedeUniversidad.id">
+    <div class="form-group">
+        <label asp-for="sedeUniversidad.nombre " >sedeUniversidad</label>
+        <input asp-for="sedeUniversidad.nombre" class="form-control">
+        <span class="text_danger" asp-validation-for="sedeUniversidad.nombre"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="sedeUniversidad.numeroSalonesDispHora"></label>
+        <input asp-for="sedeUniversidad.numeroSalonesDispHora" class="form-control">
+        <span class="text_danger" asp-validation-for="sedeUniversidad.numeroSalonesDispHora"></span>
+    </div>    
+
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+</form>
+
