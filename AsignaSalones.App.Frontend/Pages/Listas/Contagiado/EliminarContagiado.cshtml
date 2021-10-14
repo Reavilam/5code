@@ -1,0 +1,29 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.EliminarContagiadoModel
+@{
+}
+<h1>Se va a eliminar contagiado</h1>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Fecha Contagiado</th>
+            <th>Sintomas</th>
+            <th>Fecha fin aislamiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.contagiado.nombre</td>
+            <td>@Model.contagiado.apellidos</td>
+            <td>@Model.contagiado.fechaContagio</td>
+            <td>@Model.contagiado.sintomas</td>
+            <td>@Model.contagiado.periodoAislamiento</td>
+        </tr>
+    </tbody>
+</table>
+<form method="post">
+    <input type="hidden" asp-for="contagiado.id">
+    <button type="submit" class="btn btn-primary">Confirmar Eliminar</button>
+</form>

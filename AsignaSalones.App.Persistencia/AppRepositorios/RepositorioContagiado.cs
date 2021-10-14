@@ -25,7 +25,8 @@ namespace AsignaSalones.App.Persistencia
             var contagiadoEncontrado = _appContext.Contagiados.FirstOrDefault(c => c.id == contagiado.id);
             if (contagiadoEncontrado != null)
             {
-
+                contagiadoEncontrado.nombre = contagiado.nombre;
+                contagiadoEncontrado.apellidos = contagiado.apellidos; 
                 contagiadoEncontrado.fechaContagio = contagiado.fechaContagio;
                 contagiadoEncontrado.sintomas= contagiado.sintomas;
                 contagiadoEncontrado.periodoAislamiento = contagiado.periodoAislamiento;

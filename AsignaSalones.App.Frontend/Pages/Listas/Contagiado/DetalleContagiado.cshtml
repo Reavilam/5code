@@ -1,0 +1,26 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.DetalleContagiadoModel
+@{
+}
+<h1>Detalle de Contagiado</h1>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Fecha Contagiado</th>
+            <th>Sintomas</th>
+            <th>Fecha fin aislamiento</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.contagiado.nombre</td>
+            <td>@Model.contagiado.apellidos</td>
+            <td>@Model.contagiado.fechaContagio</td>
+            <td>@Model.contagiado.sintomas</td>
+            <td>@Model.contagiado.periodoAislamiento</td>
+        </tr>
+    </tbody>
+</table>
+<a class="nav-link text-dark" asp-area="" asp-page="/Listas/Contagiados">Clases</a>

@@ -1,0 +1,47 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.ContagiadosModel
+@{
+}
+<h1>Lista de Contagiados</h1>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Fecha Contagiado</th>
+            <th>Sintomas</th>
+            <th>Fecha fin aislamiento</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var contagiado in Model.Contagiados)
+    {
+        <tr>
+            <td>@contagiado.nombre</td>
+            <td>@contagiado.apellidos</td>
+            <td>@contagiado.fechaContagio</td>
+            <td>@contagiado.sintomas</td>
+            <td>@contagiado.periodoAislamiento</td>
+            @*Detalles*@
+            <td>
+                <a class="btn btn-primary table-btn" data-toggle="tooltip" title="Detalles" asp-page="./DetalleContagiado" asp-route-contagiadoid="@contagiado.id">
+                    <i class="fas fa-info-circle" aria-hidden="true"></i>
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-warning table-btn" data-toggle="tooltip" title="Editar" asp-page="./EditarContagiado" asp-route-contagiadoid="@contagiado.id">
+                    <i class="fas fa-edit" aria-hidden="true"></i>
+                </a>
+            </td>
+            <td>
+                <a class="btn btn-danger table-btn" data-toggle="tooltip" title="Eliminar" asp-page="./EliminarContagiado" asp-route-contagiadoid="@contagiado.id">
+                    <i class="fas fa-book-dead fa-lg" aria-hidden="true"></i>
+                </a>
+            </td>            
+        </tr>
+    }
+
+</tbody>
+
+</table>
+<a asp-page=".\EditarContagiado" class="btn btn-primary">Adicionar Contagiado</a>

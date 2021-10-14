@@ -82,21 +82,17 @@ namespace AsignaSalones.App.Consola
 
         private static void AddContagiado()
         {
-            var personai = new Persona
-            {
-                nombre = "Julian",
-                apellidos = "Navarrete Molina",
-                identificacion = "231245346",
-                edad = 25,
-                estadoCovid = "Positivo"
 
-            };
             var contagiado = new Contagiado
             {
-                persona = personai,
+                nombre = "Carlos",
+                apellidos = "Molina saf",
+               // identificacion = "231245346",
+               // estadoCovid = "Positivo",
                 fechaContagio =new DateTime(2021,05,25),
-                sintomas = "muy enfermo",
+                sintomas = Sintomas.Tos,
                 periodoAislamiento = new DateTime (2021,06,10)
+
             };
             _repoContagiado.AddContagiado(contagiado);
         }
@@ -105,7 +101,7 @@ namespace AsignaSalones.App.Consola
         private static void BuscarContagiado(int idContagiado)
         {
             var contagiado = _repoContagiado.GetContagiado(idContagiado);
-            Console.WriteLine(contagiado.persona+"");
+           
         }
 
             //DeleteContagiado();
