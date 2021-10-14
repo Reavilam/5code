@@ -52,6 +52,9 @@ namespace AsignaSalones.App.Consola
             //var mat_encontrada = _repoMatricula.GetMatriculaConEstudianteYClase(1);
             //Console.WriteLine("Mat.No. {0} - est. {1} - clase1 {2} - clase2 {3} - clase3 {4} ", mat_encontrada.id, mat_encontrada.estudiante.nombre, mat_encontrada.clase_1.nombre, mat_encontrada.clase_2.nombre, mat_encontrada.clase_3);
 
+            AddClaseAMatricula(1, null, null, _repoHorarioClase.GetHorarioClase(2), null);
+            AddClaseAMatricula(2, null, null, _repoHorarioClase.GetHorarioClase(5), null);
+
             IEnumerable<Matricula> matriculas_enc = _repoMatricula.GetAllMatriculasConEstudianteYClase();
             foreach (var matricula in matriculas_enc)
             {
@@ -354,6 +357,28 @@ namespace AsignaSalones.App.Consola
             };
             if (_repoMatricula.AddMatricula(matricula) != null)
                 Console.WriteLine("Registro matricula creado");
+        }
+
+        private static void AddClaseAMatricula(int idMatricula, HorarioClase clase1, HorarioClase clase2, HorarioClase clase3, HorarioClase clase4)
+        {
+            var matricula = _repoMatricula.GetMatriculaConEstudianteYClase(idMatricula);
+            if (matricula.clase_1 == null && clase1 != null)
+            {
+                matricula.clase_1 = clase1;
+            }
+            if (matricula.clase_2 == null && clase2 != null)
+            {
+                matricula.clase_2 = clase2;
+            }
+            if (matricula.clase_3 == null && clase3 != null)
+            {
+                matricula.clase_3 = clase3;
+            }
+            if (matricula.clase_4 == null && clase4 != null)
+            {
+                matricula.clase_4 = clase4;
+            }
+            _repoMatricula.UpdateMatricula(matricula);
         }
 
         //GetMatricula (Read)
