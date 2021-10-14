@@ -1,0 +1,46 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.PersonasAseoModel
+@{
+}
+<div class="container">
+    <div class="jumbotron">
+        <h1>Personal de Aseo</h1>
+    </div>
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Nombre</th>
+                <th>Apellidos</th>
+                <th>Identificacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var personalAseo in Model.PersonasAseo)
+            {
+                <tr>
+                    <td>@personalAseo.nombre</td>
+                    <td>@personalAseo.apellidos</td>
+                    <td>@personalAseo.identificacion</td>>
+                    <td>
+                        <a class="btn btn-primary table-btn" data-toggle="tooltip" title="Detalles" asp-page="./DetallePersonalAseo" asp-route-personalAseoId="@personalAseo.id">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-warning table-btn" data-toggle="tooltip" title="Editar" asp-page="./EditarPersonalAseo" asp-route-personalAseoId="@personalAseo.id">
+                            <i class="fas fa-edit" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                    <td>
+                        <a class="btn btn-danger table-btn" data-toggle="tooltip" title="Eliminar" asp-page="./EliminarPersonalAseo" asp-route-personalAseoId="@personalAseo.id">
+                            <i class="fas fa-book-dead fa-lg" aria-hidden="true"></i>
+                        </a>
+                    </td>
+                </tr>
+                        
+            }
+        </tbody>
+    </table>
+    <a asp-page=".\EditarPersonalAseo" class="btn btn-primary">Adicionar Personal Aseo</a>
+</div>
+

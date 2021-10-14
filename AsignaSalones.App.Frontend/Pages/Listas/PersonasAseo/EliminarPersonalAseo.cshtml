@@ -1,0 +1,31 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.EliminarPersonalAseoModel
+@{
+}
+<h1>Se va a eliminar el Personal de Aseo</h1>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Identificacion</th>
+            <th>Edad</th>
+            <th>Estado Covid</th>
+            <th>Turno</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.personalAseo.nombre</td>
+            <td>@Model.personalAseo.apellidos</td>
+            <td>@Model.personalAseo.identificacion</td>
+            <td>@Model.personalAseo.edad</td>
+            <td>@Model.personalAseo.estadoCovid</td>
+            <td>@Model.personalAseo.turno</td>
+        </tr>
+    </tbody>
+</table>
+<form method="post">
+    <input type="hidden" asp-for="personalAseo.id">
+    <button type="submit" class="btn btn-primary">Confirmar Eliminar</button>
+</form>

@@ -1,0 +1,28 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.DetalleMatriculaModel
+@{
+}
+<h1>Detalles de Matricula</h1>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Id matricula</th>
+            <th>Nombre Estudiante</th>
+            <th>Clase 1</th>
+            <th>Clase 2</th>
+            <th>Clase 3</th>
+            <th>Clase 4</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.matricula.id</td>
+            <td>@(Model.matricula.estudiante.nombre + " " + Model.matricula.estudiante.apellidos)</td>
+            <td>@(Model.matricula.clase_1 != null ? Model.matricula.clase_1.nombre : "")</td>
+            <td>@(Model.matricula.clase_2 != null ? Model.matricula.clase_2.nombre : "")</td>
+            <td>@(Model.matricula.clase_3 != null ? Model.matricula.clase_3.nombre : "")</td>
+            <td>@(Model.matricula.clase_4 != null ? Model.matricula.clase_4.nombre : "")</td>
+        </tr>
+    </tbody>
+</table>
+<a class="nav-link text-dark" asp-area="" asp-page="./Matriculas">Matriculas</a>

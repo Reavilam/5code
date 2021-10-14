@@ -1,0 +1,28 @@
+﻿@page
+@model AsignaSalones.App.Frontend.Pages.DetallePersonalAseoModel
+@{
+}
+<h1>Detalle de Personal de Aseo</h1>
+<table class="table table-striped">
+    <thead class="thead-dark">
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Identificacion</th>
+            <th>Edad</th>
+            <th>Estado Covid</th>
+            <th>Turno</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.personalAseo.nombre</td>
+            <td>@Model.personalAseo.apellidos</td>
+            <td>@Model.personalAseo.identificacion</td>
+            <td>@Model.personalAseo.edad</td>
+            <td>@Model.personalAseo.estadoCovid</td>
+            <td>@Model.personalAseo.turno</td>
+        </tr>
+    </tbody>
+</table>
+<a class="nav-link text-dark" asp-area="" asp-page="/Listas/PersonasAseo/PersonasAseo">Personal Aseo</a>
